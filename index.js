@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+ //The nestedFunction is inheriting internal in the console.log within that function. So when nestedFunction is called it runs internal.
 
 
 
@@ -28,10 +28,11 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+var number = number+6;
+  
   }
+  console.log(summation(4));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,8 +57,11 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(zooAnimals){
+    const displayNames = [animal_name,scientific_name];
+    // this.name = animal_name;
+    // this.scientific = scientific_name
+     zooAnimals.forEach(displayNames =>  console.log(`"name: ${animal_name}, scientific: ${scientific_name}"`));
   }
   
 
@@ -67,10 +71,12 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(zooAnimals){
+   lowerCaseNames = zooAnimals.map(function(value){
+     return value + "lowerCaseNames"
+   })
   }
-  
+  console.log(lowerCaseNames);
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
@@ -101,10 +107,13 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, cb){
+return cb(a,b)
   }
- 
+    const consume1 = function(a, b){  
+    return `Finally said ${a} to ${b}`;
+  }
+ console.log(consume("left","right",consume1))
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
