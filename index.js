@@ -58,7 +58,9 @@ const zooAnimals = [
   */
 
   function animalNames(){
-    zooAnimals.forEach(function(animal,index){
+    zooAnimals.forEach(function() {
+      
+    (animal,index)
       console.log(animal,index)
 
     })
