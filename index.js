@@ -57,11 +57,11 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(zooAnimals){
-    const displayNames = [animal_name,scientific_name];
-    // this.name = animal_name;
-    // this.scientific = scientific_name
-     zooAnimals.forEach(displayNames =>  console.log(`"name: ${animal_name}, scientific: ${scientific_name}"`));
+  function animalNames(){
+    zooAnimals.forEach(function(animal_name,scientific_name){
+
+    })
+   
   }
   
 
@@ -72,11 +72,10 @@ const zooAnimals = [
   */
 
   function lowerCaseNames(zooAnimals){
-   lowerCaseNames = zooAnimals.map(function(value){
-     return value + "lowerCaseNames"
-   })
+  let lowerCaseNames = zooAnimals.map
+   
   }
-  console.log(lowerCaseNames);
+  
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
@@ -155,14 +154,24 @@ function greeting( firstName,lastName){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+function CuboidMaker(cube){
+  constructor(cube)
+ this.length = cube.length,
+ this.width = cube.width,
+ this.height = cube.height
 }
 
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
+CuboidMaker.prototype.volume = function(){
+  
+  return cube.height * cube.width * cube.height;
+
+  }
+ 
+
 
 
 
@@ -172,6 +181,12 @@ function CuboidMaker(/*Your Code Here */){
   Create another method called surfaceArea using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
   Formula for cuboid surface area of a cube: 
   2 * (length * width + length * height + width * height)  */
+
+CuboidMaker.prototype.surfaceArea = function(){
+  return cube.length * cube.width * cube.height + cube.width * cube.height;
+} 
+  
+
 
 
 
@@ -194,6 +209,11 @@ function CuboidMaker(/*Your Code Here */){
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
+constructor(cuboidTwo){
+  this.length = cuboidTwo.length,
+ this.width = cuboidTwo.width,
+ this.height = cuboidTwo.height
+}
 
 }
 
