@@ -29,10 +29,10 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(number) {
-var number = number+6;
+return  number + 6 ;
   
   }
-  console.log(summation(4));
+  summation(4)
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -217,10 +217,10 @@ constructor(cuboidTwo){
  this.height = cuboidTwo.height
 }
 volume(){
-
+  return (`${cube.height} * ${cube.width} * ${cube.height}`);
 }
 surfaceArea(){
-  
+  return cube.length * cube.width * cube.height + cube.width * cube.height;
 }
 }
 
