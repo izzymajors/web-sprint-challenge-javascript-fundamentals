@@ -58,7 +58,8 @@ const zooAnimals = [
   */
 
   function animalNames(){
-    zooAnimals.forEach(function(animal_name,scientific_name){
+    zooAnimals.forEach(function(animal,index){
+      console.log(animal,index)
 
     })
    
@@ -71,8 +72,9 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(zooAnimals){
-  let lowerCaseNames = zooAnimals.map
+  function lowerCaseNames(item){
+    var fullname = [item.animal_name].join(" ");
+    return fullname;
    
   }
   
@@ -82,8 +84,8 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(zooAnimals){
+   
   }
   
 
@@ -165,7 +167,7 @@ function CuboidMaker(cube){
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
-CuboidMaker.prototype.volume = function(){
+CuboidMaker.prototype.volume = function(cube){
   
   return cube.height * cube.width * cube.height;
 
@@ -182,7 +184,7 @@ CuboidMaker.prototype.volume = function(){
   Formula for cuboid surface area of a cube: 
   2 * (length * width + length * height + width * height)  */
 
-CuboidMaker.prototype.surfaceArea = function(){
+CuboidMaker.prototype.surfaceArea = function(cube){
   return cube.length * cube.width * cube.height + cube.width * cube.height;
 } 
   
@@ -217,7 +219,7 @@ constructor(cuboidTwo){
  this.height = cuboidTwo.height
 }
 volume(){
-  return (`${cube.height} * ${cube.width} * ${cube.height}`);
+  return (`${cuboidTwo.height} * ${cuboidTwo.width} * ${cuboidTwo.height}`);
 }
 surfaceArea(){
   return cube.length * cube.width * cube.height + cube.width * cube.height;
